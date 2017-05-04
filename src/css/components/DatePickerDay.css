@@ -16,8 +16,14 @@
   width: calc(100% / 7);
   height: 2rem; }
 
-.DatePickerDay-inner-span {
+.DatePickerDay-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
+  .DatePickerDay-button:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 /*# sourceMappingURL=DatePickerDay.css.map */

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import autoBind from 'react-autobind';
 import '../css/components/Root.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import DatePicker from './DatePicker';
+import dayOnClick from './middleware/dayOnClick';
 
 class Root extends Component {
   constructor(props) {
     super(props);
-    autoBind(this);
+
+    this.getDatePickerProps = this.getDatePickerProps.bind(this);
+    this.dayOnClick = dayOnClick.bind(this);
 
     const selectedDate = new DatePickerDate();
     const displayedMonth = new DatePickerMonth(
@@ -23,7 +25,8 @@ class Root extends Component {
   getDatePickerProps() {
     return {
       selectedDate: this.state.selectedDate,
-      displayedMonth: this.state.displayedMonth
+      dayOnClick: this.dayOnClick,
+      displayedMonth: this.state.displayedMonth,
     };
   }
 
@@ -32,8 +35,8 @@ class Root extends Component {
       <div className="Root">
         <DatePicker {...this.getDatePickerProps()}/>
         <div>
+         <div>{this.state.selectedDate.getMonth() + 1}</div>
          <div>{this.state.selectedDate.getDate()}</div>
-         <div>{this.state.selectedDate.getMonth()}</div>
          <div>{this.state.selectedDate.getYear()}</div>
        </div>
       </div>

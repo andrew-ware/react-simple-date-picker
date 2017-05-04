@@ -4,9 +4,13 @@ import '../css/components/DatePickerDay.css';
 
 const DatePickerDay = props => (
   <div className="DatePickerDay">
-    <span className="DatePickerDay-inner-span">
+    <button
+      className="DatePickerDay-button"
+      value={props.day}
+      onClick={props.dayOnClick}
+    >
       {props.day || '' /* buffer days appear as 0's */}
-    </span>
+    </button>
   </div>
 );
 
@@ -14,4 +18,5 @@ export default DatePickerDay;
 
 DatePickerDay.propTypes = {
   day: PropTypes.number.isRequired,
+  dayOnClick: PropTypes.func.isRequired,
 };

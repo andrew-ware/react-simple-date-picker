@@ -9,7 +9,11 @@ const DatePicker = props => (
     <DatePickerHeader displayedMonth={props.displayedMonth} />
     {
       props.displayedMonth.getMonthMap().map((row, i) => (
-        <DatePickerRow key={`DatePickerRow-${i}`} row={row} />
+        <DatePickerRow
+          key={`DatePickerRow-${i}`}
+          row={row}
+          dayOnClick={props.dayOnClick}
+        />
       ))
     }
   </div>
@@ -18,11 +22,12 @@ const DatePicker = props => (
 export default DatePicker;
 
 DatePicker.propTypes = {
-  selectedDate: PropTypes.shape({
-    getTime: PropTypes.func.isRequired,
-  }).isRequired,
+  dayOnClick: PropTypes.func.isRequired,
   displayedMonth: PropTypes.shape({
     getMonthMap: PropTypes.func.isRequired,
     getFirstDay: PropTypes.func.isRequired,
+  }).isRequired,
+  selectedDate: PropTypes.shape({
+    getTime: PropTypes.func.isRequired,
   }).isRequired,
 };
