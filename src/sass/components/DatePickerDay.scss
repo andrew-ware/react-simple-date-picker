@@ -1,0 +1,14 @@
+@import '../partials/variables';
+
+.DatePickerDay {
+  outline: solid 1px red;
+  display: flex;
+  align-items: center;
+  width: $DatePickerDayWidth;
+  height: $DatePickerDayHeight;
+}
+
+.DatePickerDay-inner-span {
+  text-align: center;
+  width: 100%;
+}

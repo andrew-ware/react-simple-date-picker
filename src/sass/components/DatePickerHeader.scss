@@ -1,0 +1,17 @@
+@import '../partials/variables';
+
+.DatePickerHeader {
+  outline: solid 1px red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $DatePickerHeaderWidth;
+  height: $DatePickerHeaderHeight;
+}
+
+.DatePickerHeader-span-wrapper {
+  display: inline-block;
+  outline: solid 1px blue;
+  font-size: 1.2rem;
+  margin: 0 0.4rem;
+}

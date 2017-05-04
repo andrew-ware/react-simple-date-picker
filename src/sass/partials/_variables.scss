@@ -1,0 +1,37 @@
+/***
+  COLOR PALLETTE
+***/
+
+/* Grey scale */
+$c0: #FFFFFF;
+$c1: #F5F5F5;
+$c2: #EEEEEE;
+$c3: #E0E0E0;
+$c4: #BDBDBD;
+$c5: #9E9E9E;
+$c6: #757575;
+$c7: #616161;
+$c8: #424242;
+$c9: #212121;
+$c10: #000000;
+
+/***
+  MEASUREMENTS
+***/
+
+/* DatePicker */
+$DatePickerWidth: 100%;
+$DatePickerMaxWidth: 20rem;
+$DatePickerHeight: auto;
+
+/* DatePickerRow */
+$DatePickerRowWidth: 100%;
+$DatePickerRowHeight: 2rem;
+
+/* DatePickerDay */
+$DatePickerDayWidth: calc(100% / 7);
+$DatePickerDayHeight: 2rem;
+
+/* DatePickerHeader */
+$DatePickerHeaderWidth: 100%;
+$DatePickerHeaderHeight: 2.4rem;

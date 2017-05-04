@@ -1,0 +1,23 @@
+/***
+  COLOR PALLETTE
+***/
+/* Grey scale */
+/***
+  MEASUREMENTS
+***/
+/* DatePicker */
+/* DatePickerRow */
+/* DatePickerDay */
+/* DatePickerHeader */
+.DatePickerDay {
+  outline: solid 1px red;
+  display: flex;
+  align-items: center;
+  width: calc(100% / 7);
+  height: 2rem; }
+
+.DatePickerDay-inner-span {
+  text-align: center;
+  width: 100%; }
+
+/*# sourceMappingURL=DatePickerDay.css.map */
