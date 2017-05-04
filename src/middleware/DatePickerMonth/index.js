@@ -21,7 +21,6 @@ function DatePickerMonth(
       tempRow.push(0);
     }
 
-    console.log(dayCount);
     let monthMapIndex = dayCount;
     while (monthMapIndex > -1) {
       if (tempRow.length > 6) {
