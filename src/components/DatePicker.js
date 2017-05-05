@@ -37,7 +37,11 @@ class DatePicker extends Component {
       displayedMonth,
       dirty: true,
       inputName: 'date',
-      reset: this.reset,
+      showDateReset: true,
+      showDateSelected: true,
+      showWeekDayNames: true,
+      showMonthChangeButtons: true,
+      showYearChangeButtons: true,
       selectedDate,
     };
   }
@@ -56,8 +60,14 @@ class DatePicker extends Component {
           changeMonthOnClick={this.changeMonthOnClick}
           changeYearOnClick={this.changeYearOnClick}
           displayedMonth={this.state.displayedMonth}
+          showMonthChangeButtons={this.state.showMonthChangeButtons}
+          showYearChangeButtons={this.state.showYearChangeButtons}
         />
-        <DatePickerDayNamesHeader />
+        {
+          this.state.showWeekDayNames
+            ? <DatePickerDayNamesHeader/>
+            : null
+        }
         {
           this.state.displayedMonth.getMonthMap().map((row, i) => (
             <DatePickerRow
@@ -69,11 +79,16 @@ class DatePicker extends Component {
             />
           ))
         }
-        <DatePickerValueDisplay
-          value={this.state.selectedDate.getHumanDateString()}
-        />
         {
-          this.reset
+          this.state.showDateSelected
+            ?
+              <DatePickerValueDisplay
+                value={this.state.selectedDate.getHumanDateString()}
+              />
+            : null
+        }
+        {
+          this.state.showDateReset
             ? <DatePickerReset reset={this.reset} />
             : null
         }
