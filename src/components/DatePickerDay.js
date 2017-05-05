@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/components/DatePickerDay.css';
 
 const DatePickerDay = props => (
   <div className={`DatePickerDay ${props.active ? 'active' : ''}`}>

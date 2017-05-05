@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/components/DatePickerDayNamesHeader.css';
 
 const DatePickerDayNamesHeader = () => {
   const daysOfWeek = [ 'S', 'M', 'T', 'W', 'T', 'F', 'S' ];

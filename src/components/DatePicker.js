@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import '../lib/mdi/css/materialdesignicons.css';
-import '../css/components/DatePicker.css';
+import PropTypes from 'prop-types';
+import '../lib/mdi/css/mid.min.css';
+import '../css/DatePicker.min.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import dayOnClick from './middleware/dayOnClick';
 import { previousMonth, nextMonth } from './middleware/changeMonthOnClick';
@@ -28,21 +29,21 @@ class DatePicker extends Component {
     };
     this.reset = reset.bind(this);
 
-    const selectedDate = new DatePickerDate();
+    const selectedDate = new DatePickerDate(this.props.initialDate)
     const displayedMonth = new DatePickerMonth(
       selectedDate.getMonth(),
       selectedDate.getYear()
     );
     this.state = {
       displayedMonth,
-      dirty: true,
-      inputName: 'date',
-      showDateReset: true,
-      showDateSelected: true,
-      showWeekDayNames: true,
-      showMonthChangeButtons: true,
-      showYearChangeButtons: true,
-      selectedDate,
+      dirty: this.props.dirty,
+      inputName: this.props.inputName,
+      showDateReset: this.props.showDateReset,
+      showDateSelected: this.props.showDateSelected,
+      showWeekDayNames: this.props.showWeekDayNames,
+      showMonthChangeButtons: this.props.showMonthChangeButtons,
+      showYearChangeButtons: this.props.showYearChangeButtons,
+      selectedDate
     };
   }
 
@@ -98,3 +99,25 @@ class DatePicker extends Component {
 };
 
 export default DatePicker;
+
+DatePicker.propTypes = {
+  dirty: PropTypes.bool,
+  inputName: PropTypes.string,
+  showDateReset: PropTypes.bool,
+  showDateSelected: PropTypes.bool,
+  showWeekDayNames: PropTypes.bool,
+  showMonthChangeButtons: PropTypes.bool,
+  showYearChangeButtons: PropTypes.bool,
+  initialDate: React.PropTypes.instanceOf(Date),
+};
+
+DatePicker.defaultProps = {
+  dirty: true,
+  inputName: 'date',
+  showDateReset: true,
+  showDateSelected: true,
+  showWeekDayNames: true,
+  showMonthChangeButtons: true,
+  showYearChangeButtons: true,
+  initialDate: Date.now(),
+};

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/components/DatePickerValueDisplay.css';
 
 const DatePickerValueDisplay = props => (
   <div className="DatePickerValueDisplay">

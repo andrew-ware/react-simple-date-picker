@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/components/DatePickerReset.css';
 
 const DatePickerReset = props => (
   <div className="DatePickerReset">

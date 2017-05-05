@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/components/DatePickerHeader.css';
 
 const DatePickerHeader = props => (
   <div className="DatePickerHeader">

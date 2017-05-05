@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DatePickerDay from './DatePickerDay';
-import '../css/components/DatePickerRow.css';
 
 const DatePickerRow = props => (
   <div className="DatePickerRow">
