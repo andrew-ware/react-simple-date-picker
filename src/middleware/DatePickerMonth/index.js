@@ -1,5 +1,5 @@
 import validateType from '../validateType';
-import monthNumberToNameDict from './monthNumberToNameDict';
+import monthNumberToNameDict from '../monthNumberToNameDict';
 import getMonthDayCount from './getMonthDayCount';
 
 function DatePickerMonth(

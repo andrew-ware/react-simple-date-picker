@@ -18,4 +18,10 @@ button {
   &:focus {
     outline: none;
   }
+  &:disabled {
+    cursor: default;
+    &:hover {
+      background-color: inherit;
+    }
+  }
 }

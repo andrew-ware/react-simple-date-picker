@@ -1,6 +1,6 @@
 # react-simple-date-picker
 
-A Simple, Modular React Date Picker Component
+A simple, modular React date picker component
 
 ### Installation
 - Install the necessary dependencies via `npm i`.

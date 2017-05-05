@@ -34,11 +34,8 @@ class Root extends Component {
     return (
       <div className="Root">
         <DatePicker {...this.getDatePickerProps()}/>
-        <div>
-         <div>{this.state.selectedDate.getMonth() + 1}</div>
-         <div>{this.state.selectedDate.getDate()}</div>
-         <div>{this.state.selectedDate.getYear()}</div>
-       </div>
+        <div>{this.state.selectedDate.getHumanDateString()}</div>
+        <div>{this.state.selectedDate.getFormattedDateString()}</div>
       </div>
     );
   }

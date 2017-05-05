@@ -8,6 +8,7 @@ const DatePickerDay = props => (
       className="DatePickerDay-button"
       value={props.day}
       onClick={props.dayOnClick}
+      disabled={!props.day}
     >
       {props.day || '' /* buffer days appear as 0's */}
     </button>
