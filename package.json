@@ -1,12 +1,11 @@
 {
-  "name": "date-picker",
+  "name": "react-simple-date-picker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "mdi": "^1.9.33",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-autobind": "^1.0.6",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
@@ -24,8 +23,8 @@
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/components:./src/css/components"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "description": "react-simple-date-picker",
   "main": "index.js",
-  "author": "",
+  "author": "Andrew Ware",
   "license": "ISC"
 }
