@@ -49,7 +49,7 @@ These customizable props include:
 - `showWeekDayName`: show the abbreviated week names at the top of the calendar [defaults to `true`]
 - `showMonthChangeButtons`: show the left/right arrow buttons for changing the month [defaults to `true`]
 - `showYearChangeButtons`: show the up/down arrow buttons for changing the year [defaults to `true`]
-- `initialDate`: the initially selected date (Date) [defaults to `Date.now()`]
+- `initialDate`: the initially selected date (Date) [defaults to `new Date()`]
 
 
 ### Usage With Custom Props
