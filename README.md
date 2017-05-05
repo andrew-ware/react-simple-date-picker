@@ -3,6 +3,9 @@
 A simple, modular React date picker component
 
 
+![react-simple-date-picker](https://andrewware.xyz/img/react-simple-date-picker.gif)
+
+
 ## Installation
 The package can be installed via NPM:
 ```
