@@ -34,6 +34,9 @@
   .DatePickerHeader-month-previous-wrapper i, .DatePickerHeader-month-next-wrapper i {
     font-size: 1.2rem; }
 
+.DatePickerHeader-year-changer-buttons-wrapper {
+  padding: 0 0 0 0.3rem; }
+
 .DatePickerHeader-month-previous-wrapper {
   left: 0; }
 

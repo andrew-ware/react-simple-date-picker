@@ -49,19 +49,24 @@ function DatePickerMonth(
     return day % 7;
   };
 
-  const createNewMonth = monthIncrement => {
+  const createNewMonth = (monthIncrement, yearIncrement) => {
     const month = ((this.month || 12) + monthIncrement) % 12;
-    let year = this.year;
+    let year = this.year + (yearIncrement || 0);
     if (this.month + monthIncrement === 12) {
       year = this.year + 1;
     } else if (this.month + monthIncrement === -1) {
       year = this.year - 1;
     }
     return new DatePickerMonth(month, year);
-  }
+  };
+
   this.getPreviousMonth = () => createNewMonth(-1);
 
   this.getNextMonth = () => createNewMonth(1);
+
+  this.getPreviousYear = () => createNewMonth(0, -1);
+
+  this.getNextYear = () => createNewMonth(0, 1);
 }
 
 export default DatePickerMonth;

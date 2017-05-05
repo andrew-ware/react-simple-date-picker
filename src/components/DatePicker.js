@@ -3,7 +3,8 @@ import '../lib/mdi/css/materialdesignicons.css';
 import '../css/components/DatePicker.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import dayOnClick from './middleware/dayOnClick';
-import { previous, next } from './middleware/changeMonthOnClick';
+import { previousMonth, nextMonth } from './middleware/changeMonthOnClick';
+import { previousYear, nextYear } from './middleware/changeYearOnClick';
 import reset from './middleware/reset';
 import DatePickerHeader from './DatePickerHeader';
 import DatePickerDayNamesHeader from './DatePickerDayNamesHeader';
@@ -18,8 +19,12 @@ class DatePicker extends Component {
     this.noop = () => {};
     this.dayOnClick = dayOnClick.bind(this);
     this.changeMonthOnClick = {
-      previous: previous.bind(this),
-      next: next.bind(this),
+      previous: previousMonth.bind(this),
+      next: nextMonth.bind(this),
+    };
+    this.changeYearOnClick = {
+      previous: previousYear.bind(this),
+      next: nextYear.bind(this),
     };
     this.reset = reset.bind(this);
 
@@ -49,6 +54,7 @@ class DatePicker extends Component {
         />
         <DatePickerHeader
           changeMonthOnClick={this.changeMonthOnClick}
+          changeYearOnClick={this.changeYearOnClick}
           displayedMonth={this.state.displayedMonth}
         />
         <DatePickerDayNamesHeader />
