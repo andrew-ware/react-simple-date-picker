@@ -63,3 +63,7 @@ These customizable props include:
   />
   ...
 ```
+
+
+### Continuous Development
+If you wish to build upon or style upon the existing component, checkout the [dev branch](https://github.com/andrew-ware/react-simple-date-picker/tree/dev) for precompiled sass files.
