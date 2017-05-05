@@ -2,7 +2,28 @@
 
 .DatePicker {
   border: solid 1px $DatePickerBorderColor;
+  color: $DatePickerFontColor;
   width: $DatePickerWidth;
   max-width: $DatePickerMaxWidth;
+  min-width: $DatePickerMinWidth;
   height: $DatePickerHeight;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background-color: $ActiveBGColor;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    cursor: default;
+    &:hover {
+      background-color: inherit;
+    }
+  }
 }

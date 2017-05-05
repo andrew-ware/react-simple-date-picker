@@ -1,0 +1,16 @@
+@import '../partials/variables';
+
+.DatePickerValueDisplay {
+  border-top: solid 1px $DatePickerValueDisplayBorderColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: $DatePickerValueDisplayPaddingTop;
+  width: $DatePickerValueDisplayWidth;
+  height: $DatePickerValueDisplayHeight;
+}
+
+.DatePickerValueDisplay-selected-span, .DatePickerValueDisplay-value-span {
+  font-weight: 600;
+  margin: 0 0.3rem;
+}

@@ -5,11 +5,12 @@
 /***
   MEASUREMENTS
 ***/
-/* Root */
 /* DatePicker */
 /* DatePickerRow */
 /* DatePickerDay */
 /* DatePickerHeader */
+/* DatePickerValueDisplay */
+/* DatePickerReset */
 /***
   COLOR PALLETTE
 ***/
@@ -17,11 +18,12 @@
 /***
   MEASUREMENTS
 ***/
-/* Root */
 /* DatePicker */
 /* DatePickerRow */
 /* DatePickerDay */
 /* DatePickerHeader */
+/* DatePickerValueDisplay */
+/* DatePickerReset */
 .DatePickerDayNamesHeader {
   display: flex;
   align-items: center;

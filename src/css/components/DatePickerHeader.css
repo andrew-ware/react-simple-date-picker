@@ -5,11 +5,12 @@
 /***
   MEASUREMENTS
 ***/
-/* Root */
 /* DatePicker */
 /* DatePickerRow */
 /* DatePickerDay */
 /* DatePickerHeader */
+/* DatePickerValueDisplay */
+/* DatePickerReset */
 .DatePickerHeader {
   border-bottom: solid 1px #616161;
   display: flex;
@@ -30,6 +31,8 @@
   height: 100%; }
   .DatePickerHeader-month-previous-wrapper button, .DatePickerHeader-month-next-wrapper button {
     height: 100%; }
+  .DatePickerHeader-month-previous-wrapper i, .DatePickerHeader-month-next-wrapper i {
+    font-size: 1.2rem; }
 
 .DatePickerHeader-month-previous-wrapper {
   left: 0; }

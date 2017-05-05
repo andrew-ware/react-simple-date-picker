@@ -5,11 +5,12 @@
 /***
   MEASUREMENTS
 ***/
-/* Root */
 /* DatePicker */
 /* DatePickerRow */
 /* DatePickerDay */
 /* DatePickerHeader */
+/* DatePickerValueDisplay */
+/* DatePickerReset */
 .DatePickerRow {
   display: flex;
   align-items: center;

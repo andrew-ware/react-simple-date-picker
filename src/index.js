@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/Root';
+import DatePicker from './components/DatePicker';
 
 ReactDOM.render(
-  <Root />,
+  <DatePicker />,
   document.getElementById('root')
 );

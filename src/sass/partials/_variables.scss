@@ -15,24 +15,25 @@ $c8: #424242;
 $c9: #212121;
 $c10: #000000;
 
+$DatePickerFontColor: $c9;
 $ActiveBGColor: rgba(0, 0, 0, 0.2);
 $DayActiveBGColor: $ActiveBGColor;
 $DatePickerBorderColor: $c7;
 $DatePickerHeaderBorderColor: $c7;
 $DatePickerRowBorderColor: $c5;
 $DatePickerDayBorderColor: $DatePickerRowBorderColor;
+$DatePickerValueDisplayBorderColor: $c5;
+$DatePickerResetButtonBorderColor: $c6;
+$DatePickerResetButtonBackgroundColor: $c1;
 
 /***
   MEASUREMENTS
 ***/
 
-/* Root */
-$RootMinWidth: 15.625rem;
-
 /* DatePicker */
-$RootBackgroundColor: inherit;
 $DatePickerWidth: 100%;
 $DatePickerMaxWidth: 20rem;
+$DatePickerMinWidth: 15.625rem;
 $DatePickerHeight: auto;
 
 /* DatePickerRow */
@@ -46,3 +47,14 @@ $DatePickerDayHeight: 2rem;
 /* DatePickerHeader */
 $DatePickerHeaderWidth: 100%;
 $DatePickerHeaderHeight: 2.4rem;
+
+/* DatePickerValueDisplay */
+$DatePickerValueDisplayWidth: 100%;
+$DatePickerValueDisplayHeight: 2rem;
+
+/* DatePickerReset */
+$DatePickerValueDisplayPaddingTop: 0.4rem;
+$DatePickerResetWidth: 100%;
+$DatePickerResetHeight: 3rem;
+$DatePickerResetButtonWidth: 30%;
+$DatePickerResetButtonHeight: 60%;

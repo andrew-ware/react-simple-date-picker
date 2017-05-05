@@ -1,0 +1,20 @@
+@import '../partials/variables';
+
+.DatePickerReset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $DatePickerResetWidth;
+  height: $DatePickerResetHeight;
+}
+
+.DatePickerReset-button {
+  background-color: $DatePickerResetButtonBackgroundColor;
+  border: solid 1px $DatePickerResetButtonBorderColor;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-style: italic;
+  letter-spacing: 0.025rem;
+  width: $DatePickerResetButtonWidth;
+  height: $DatePickerResetButtonHeight;
+}
