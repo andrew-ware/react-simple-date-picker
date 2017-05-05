@@ -1,17 +1,34 @@
 @import '../partials/variables';
 
 .DatePickerHeader {
-  outline: solid 1px red;
+  border-bottom: solid 1px $DatePickerHeaderBorderColor;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: $DatePickerHeaderWidth;
   height: $DatePickerHeaderHeight;
 }
 
 .DatePickerHeader-span-wrapper {
   display: inline-block;
-  outline: solid 1px blue;
   font-size: 1.2rem;
-  margin: 0 0.4rem;
+  margin: 0 0.25rem;
+}
+
+.DatePickerHeader-month-previous-wrapper, .DatePickerHeader-month-next-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  button {
+    height: 100%;
+  }
+}
+
+.DatePickerHeader-month-previous-wrapper {
+  left: 0;
+}
+
+.DatePickerHeader-month-next-wrapper {
+  right: 0;
 }

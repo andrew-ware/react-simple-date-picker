@@ -10,7 +10,7 @@
 /* DatePickerDay */
 /* DatePickerHeader */
 .DatePicker {
-  outline: solid 1px black;
+  border: solid 1px #616161;
   width: 100%;
   max-width: 20rem;
   height: auto; }

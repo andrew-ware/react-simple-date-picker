@@ -10,6 +10,7 @@ const DatePickerRow = props => (
         <DatePickerDay
           key={`DatePickerDay-${i}`}
           day={day}
+          active={props.selectedDate.getDate() === day && props.dirty}
           dayOnClick={props.dayOnClick}
         />
       ))
@@ -20,6 +21,10 @@ const DatePickerRow = props => (
 export default DatePickerRow;
 
 DatePickerRow.propTypes = {
-  row: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
   dayOnClick: PropTypes.func.isRequired,
+  dirty: PropTypes.bool.isRequired,
+  row: PropTypes.arrayOf(PropTypes.number.isRequired).isRequired,
+  selectedDate: PropTypes.shape({
+    getTime: PropTypes.func.isRequired,
+  }).isRequired,
 };

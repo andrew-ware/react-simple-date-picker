@@ -10,17 +10,30 @@
 /* DatePickerDay */
 /* DatePickerHeader */
 .DatePickerHeader {
-  outline: solid 1px red;
+  border-bottom: solid 1px #616161;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 2.4rem; }
 
 .DatePickerHeader-span-wrapper {
   display: inline-block;
-  outline: solid 1px blue;
   font-size: 1.2rem;
-  margin: 0 0.4rem; }
+  margin: 0 0.25rem; }
+
+.DatePickerHeader-month-previous-wrapper, .DatePickerHeader-month-next-wrapper {
+  position: absolute;
+  top: 0;
+  height: 100%; }
+  .DatePickerHeader-month-previous-wrapper button, .DatePickerHeader-month-next-wrapper button {
+    height: 100%; }
+
+.DatePickerHeader-month-previous-wrapper {
+  left: 0; }
+
+.DatePickerHeader-month-next-wrapper {
+  right: 0; }
 
 /*# sourceMappingURL=DatePickerHeader.css.map */

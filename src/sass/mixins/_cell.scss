@@ -1,0 +1,13 @@
+@import '../partials/variables';
+
+@mixin cell() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: $DatePickerDayWidth;
+  height: $DatePickerDayHeight;
+  &:not(:first-child) {
+    border-left: solid 1px $DatePickerDayBorderColor;
+  }
+}

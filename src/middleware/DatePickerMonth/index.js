@@ -22,7 +22,7 @@ function DatePickerMonth(
     }
 
     let monthMapIndex = dayCount;
-    while (monthMapIndex > -1) {
+    while (monthMapIndex > 0) {
       if (tempRow.length > 6) {
         map.push(tempRow);
         tempRow = [];
@@ -33,6 +33,9 @@ function DatePickerMonth(
     }
 
     if (tempRow.length > 0) {
+      while (tempRow.length < 7) {
+        tempRow.push(0);
+      }
       map.push(tempRow);
     }
 
@@ -40,9 +43,25 @@ function DatePickerMonth(
   };
 
   this.getFirstDay = () => {
-    const day = new Date(`${this.year}-${this.month}-01`).getDay();
-    return day === 0 ? 7 : day;
+    // month is stored as an int 0-11, we need it to be an int corresponding
+    // to its real calendar month, so we increment by 1
+    const day = new Date(`${this.year}-${this.month + 1}-01`).getDay();
+    return day % 7;
   };
+
+  const createNewMonth = monthIncrement => {
+    const month = ((this.month || 12) + monthIncrement) % 12;
+    let year = this.year;
+    if (this.month + monthIncrement === 12) {
+      year = this.year + 1;
+    } else if (this.month + monthIncrement === -1) {
+      year = this.year - 1;
+    }
+    return new DatePickerMonth(month, year);
+  }
+  this.getPreviousMonth = () => createNewMonth(-1);
+
+  this.getNextMonth = () => createNewMonth(1);
 }
 
 export default DatePickerMonth;

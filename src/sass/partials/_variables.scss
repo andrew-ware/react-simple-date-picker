@@ -15,11 +15,19 @@ $c8: #424242;
 $c9: #212121;
 $c10: #000000;
 
+$ActiveBGColor: rgba(0, 0, 0, 0.2);
+$DayActiveBGColor: $ActiveBGColor;
+$DatePickerBorderColor: $c7;
+$DatePickerHeaderBorderColor: $c7;
+$DatePickerRowBorderColor: $c5;
+$DatePickerDayBorderColor: $DatePickerRowBorderColor;
+
 /***
   MEASUREMENTS
 ***/
 
 /* DatePicker */
+$RootBackgroundColor: inherit;
 $DatePickerWidth: 100%;
 $DatePickerMaxWidth: 20rem;
 $DatePickerHeight: auto;

@@ -6,7 +6,7 @@ html, body {
 }
 
 .Root {
-  background-color: $c2;
+  background-color: $RootBackgroundColor;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -15,6 +15,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background-color: $ActiveBGColor;
+  }
   &:focus {
     outline: none;
   }

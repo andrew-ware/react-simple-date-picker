@@ -1,7 +1,7 @@
 @import '../partials/variables';
 
 .DatePicker {
-  outline: solid 1px black;
+  border: solid 1px $DatePickerBorderColor;
   width: $DatePickerWidth;
   max-width: $DatePickerMaxWidth;
   height: $DatePickerHeight;

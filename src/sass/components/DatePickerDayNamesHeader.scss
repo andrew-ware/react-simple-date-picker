@@ -1,0 +1,11 @@
+@import '../mixins/row';
+@import '../mixins/cell';
+
+.DatePickerDayNamesHeader {
+  @include row();
+  font-style: italic;
+}
+
+.DatePickerDayNamesHeader-day-of-week {
+  @include cell();
+}

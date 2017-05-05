@@ -1,0 +1,11 @@
+@import '../partials/variables';
+
+@mixin row() {
+  display: flex;
+  align-items: center;
+  width: $DatePickerRowWidth;
+  height: $DatePickerRowHeight;
+  &:not(:last-child) {
+    border-bottom: solid 1px $DatePickerRowBorderColor;
+  }
+}

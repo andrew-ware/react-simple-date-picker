@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../css/components/DatePickerDay.css';
 
 const DatePickerDay = props => (
-  <div className="DatePickerDay">
+  <div className={`DatePickerDay ${props.active ? 'active' : ''}`}>
     <button
       className="DatePickerDay-button"
       value={props.day}

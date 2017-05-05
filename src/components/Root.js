@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import '../lib/mdi/css/materialdesignicons.css';
 import '../css/components/Root.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import DatePicker from './DatePicker';
 import dayOnClick from './middleware/dayOnClick';
+import { previous, next } from './middleware/changeMonthOnClick';
 
 class Root extends Component {
   constructor(props) {
@@ -10,6 +12,10 @@ class Root extends Component {
 
     this.getDatePickerProps = this.getDatePickerProps.bind(this);
     this.dayOnClick = dayOnClick.bind(this);
+    this.changeMonthOnClick = {
+      previous: previous.bind(this),
+      next: next.bind(this),
+    };
 
     const selectedDate = new DatePickerDate();
     const displayedMonth = new DatePickerMonth(
@@ -18,15 +24,18 @@ class Root extends Component {
     );
     this.state = {
       selectedDate,
-      displayedMonth
+      displayedMonth,
+      dirty: true
     };
   }
 
   getDatePickerProps() {
     return {
-      selectedDate: this.state.selectedDate,
+      changeMonthOnClick: this.changeMonthOnClick,
       dayOnClick: this.dayOnClick,
+      dirty: this.state.dirty,
       displayedMonth: this.state.displayedMonth,
+      selectedDate: this.state.selectedDate,
     };
   }
 
