@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../lib/mdi/css/mid.min.css';
+import '../lib/mdi/css/mdi.min.css';
 import '../css/DatePicker.min.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import dayOnClick from './middleware/dayOnClick';
@@ -108,7 +108,7 @@ DatePicker.propTypes = {
   showWeekDayNames: PropTypes.bool,
   showMonthChangeButtons: PropTypes.bool,
   showYearChangeButtons: PropTypes.bool,
-  initialDate: React.PropTypes.instanceOf(Date),
+  initialDate: PropTypes.instanceOf(Date),
 };
 
 DatePicker.defaultProps = {
@@ -119,5 +119,5 @@ DatePicker.defaultProps = {
   showWeekDayNames: true,
   showMonthChangeButtons: true,
   showYearChangeButtons: true,
-  initialDate: Date.now(),
+  initialDate: new Date(),
 };
