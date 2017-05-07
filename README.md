@@ -2,21 +2,13 @@
 
 A simple, modular React date picker component
 
-
 ![react-simple-date-picker](https://andrewware.xyz/img/react-simple-date-picker.gif)
-
 
 ## Installation
 The package can be installed via NPM:
 ```
 npm i -S react-simple-date-picker
 ```
-
-You'll also need to install the React PropTypes library if you haven't already.
-```
-npm i -S prop-types
-```
-
 
 ## Usage
 ```js
@@ -37,7 +29,6 @@ const MyForm = () => (
 export default MyForm;
 ```
 
-
 ## Customization
 This DatePicker component is built simple on purpose. It's intended to be built upon. However, there are some pieces that are customizable right out of the box.
 
@@ -51,7 +42,6 @@ These customizable props include:
 - `showYearChangeButtons`: show the up/down arrow buttons for changing the year [defaults to `true`]
 - `initialDate`: the initially selected date (Date) [defaults to `new Date()`]
 
-
 ### Usage With Custom Props
 ```js
   ...
@@ -64,6 +54,12 @@ These customizable props include:
   ...
 ```
 
-
 ### Continuous Development
-If you wish to build upon or style upon the existing component, checkout the [dev branch](https://github.com/andrew-ware/react-simple-date-picker/tree/dev) for precompiled sass files.
+If you'd like to build upon the existing component (and you should!), you can
+find all the applicable files within the `src` directory, with all the React
+components located within the `components` directory.
+
+### Scripts
+`npm start` to start a dev server
+`npm run build` to create a production build
+`npm run build-dev` to create a dev build
