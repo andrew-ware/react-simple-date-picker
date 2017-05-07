@@ -60,6 +60,6 @@ find all the applicable files within the `src` directory, with all the React
 components located within the `components` directory.
 
 ### Scripts
-`npm start` to start a dev server
-`npm run build` to create a production build
-`npm run build-dev` to create a dev build
+`npm start` to start a dev server  
+`npm run build` to create a production build  
+`npm run build-dev` to create a dev build  
