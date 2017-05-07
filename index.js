@@ -1,2 +1,1 @@
-import DatePicker from './src/components/DatePicker';
-export default DatePicker;
+module.exports = require('./dist');
