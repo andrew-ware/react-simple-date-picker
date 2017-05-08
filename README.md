@@ -63,6 +63,8 @@ Before you begin hacking away, run `npm i` at the root level directory.
 This will get you setup with webpack and the necessary loaders so you can run a dev server and create a build when the time is right.
 
 ### Scripts
-`npm start` to start a dev server
-`npm run build` to create a production build
-`npm run build-dev` to create a dev build
+`npm start` to start a dev server  
+
+`npm run build` to create a production build  
+
+`npm run build-dev` to create a dev build  
