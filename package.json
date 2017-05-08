@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/andrew-ware/react-simple-date-picker.git"
   },
-  keywords: [
+  "keywords": [
     "react",
     "date",
     "picker",
