@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../lib/mdi/css/mdi.min.css';
-import '../css/DatePicker.min.css';
+import '../lib/mdi/css/materialdesignicons.css';
+import '../css/DatePicker.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import dayOnClick from './middleware/dayOnClick';
 import { previousMonth, nextMonth } from './middleware/changeMonthOnClick';

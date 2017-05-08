@@ -1,8 +1,7 @@
 # dependencies
 /node_modules
 
-# webpack builds
-/dist
+# webpack dev build
 /build
 
 # misc
