@@ -33,7 +33,7 @@ export default MyForm;
 This DatePicker component is built simple on purpose. It's intended to be built upon. However, there are some pieces that are customizable right out of the box.
 
 These customizable props include:
-- `dirty`: should the currently selected date be shown (highlighted cell) [defaults to `true`]
+- `dirty`: should the currently selected date be shown on mount [defaults to `true`]
 - `inputName`: the html input element's "name" property [defaults to `'date'`]
 - `showDateReset`: show the reset button [defaults to `true`]
 - `showDateSelected`: show the currently selected date in a human readable string [defaults to `true`]
@@ -59,7 +59,10 @@ If you'd like to build upon the existing component (and you should!), you can
 find all the applicable files within the `src` directory, with all the React
 components located within the `components` directory.
 
+Before you begin hacking away, run `npm i` at the root level directory.
+This will get you setup with webpack and the necessary loaders so you can run a dev server and create a build when the time is right.
+
 ### Scripts
-`npm start` to start a dev server  
-`npm run build` to create a production build  
-`npm run build-dev` to create a dev build  
+`npm start` to start a dev server
+`npm run build` to create a production build
+`npm run build-dev` to create a dev build

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../lib/mdi/css/materialdesignicons.css';
 import '../css/DatePicker.css';
 import { DatePickerDate, DatePickerMonth } from '../middleware';
 import dayOnClick from './middleware/dayOnClick';
@@ -50,6 +49,7 @@ class DatePicker extends Component {
   render() {
     return (
       <div className="DatePicker">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.9.32/css/materialdesignicons.min.css" />
         <input
           type="date"
           hidden

@@ -32,11 +32,6 @@ module.exports = {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=fonts/[name].[ext]',
-        exclude: /node_modules/
       }
     ]
   },
