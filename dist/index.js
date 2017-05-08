@@ -3206,7 +3206,8 @@ var _DatePickerMonth2 = _interopRequireDefault(_DatePickerMonth);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function reset() {
+function reset(e) {
+  e.preventDefault();
   var selectedDate = new _DatePickerDate2.default();
   var displayedMonth = new _DatePickerMonth2.default(selectedDate.getMonth(), selectedDate.getYear());
   this.setState(_extends({}, this.state, {
