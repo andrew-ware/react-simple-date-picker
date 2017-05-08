@@ -1,7 +1,8 @@
 import DatePickerDate from '../../middleware/DatePickerDate'
 import DatePickerMonth from '../../middleware/DatePickerMonth';
 
-function reset() {
+function reset(e) {
+  e.preventDefault();
   const selectedDate = new DatePickerDate();
   const displayedMonth = new DatePickerMonth(
     selectedDate.getMonth(),
