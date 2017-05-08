@@ -2,6 +2,7 @@ import DatePickerDate from '../../middleware/DatePickerDate';
 import zeroPad from '../../middleware/zeroPad';
 
 function dayOnClick(e) {
+  e.preventDefault();
   const day = parseInt(e.target.value, 10);
   // month is stored as an int 0-11, we need it to be an int corresponding
   // to its real calendar month, so we increment by 1

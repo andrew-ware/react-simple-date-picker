@@ -3092,14 +3092,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function previousMonth() {
+function previousMonth(e) {
+  e.preventDefault();
   this.setState(_extends({}, this.state, {
     displayedMonth: this.state.displayedMonth.getPreviousMonth(),
     dirty: this.state.displayedMonth.getPreviousMonth().month === this.state.selectedDate.getMonth() && this.state.displayedMonth.getPreviousMonth().year === this.state.selectedDate.getYear()
   }));
 };
 
-function nextMonth() {
+function nextMonth(e) {
+  e.preventDefault();
   this.setState(_extends({}, this.state, {
     displayedMonth: this.state.displayedMonth.getNextMonth(),
     dirty: this.state.displayedMonth.getNextMonth().month === this.state.selectedDate.getMonth() && this.state.displayedMonth.getNextMonth().year === this.state.selectedDate.getYear()
@@ -3122,14 +3124,16 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-function previousYear() {
+function previousYear(e) {
+  e.preventDefault();
   this.setState(_extends({}, this.state, {
     displayedMonth: this.state.displayedMonth.getPreviousYear(),
     dirty: this.state.displayedMonth.getPreviousYear().month === this.state.selectedDate.getMonth() && this.state.displayedMonth.getPreviousYear().year === this.state.selectedDate.getYear()
   }));
 };
 
-function nextYear() {
+function nextYear(e) {
+  e.preventDefault();
   this.setState(_extends({}, this.state, {
     displayedMonth: this.state.displayedMonth.getNextYear(),
     dirty: this.state.displayedMonth.getNextYear().month === this.state.selectedDate.getMonth() && this.state.displayedMonth.getNextYear().year === this.state.selectedDate.getYear()
@@ -3163,6 +3167,7 @@ var _zeroPad2 = _interopRequireDefault(_zeroPad);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function dayOnClick(e) {
+  e.preventDefault();
   var day = parseInt(e.target.value, 10);
   // month is stored as an int 0-11, we need it to be an int corresponding
   // to its real calendar month, so we increment by 1

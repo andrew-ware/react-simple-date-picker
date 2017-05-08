@@ -1,4 +1,5 @@
-function previousMonth() {
+function previousMonth(e) {
+  e.preventDefault();
   this.setState({
     ...this.state,
     displayedMonth: this.state.displayedMonth.getPreviousMonth(),
@@ -9,7 +10,8 @@ function previousMonth() {
   });
 };
 
-function nextMonth() {
+function nextMonth(e) {
+  e.preventDefault();
   this.setState({
     ...this.state,
     displayedMonth: this.state.displayedMonth.getNextMonth(),

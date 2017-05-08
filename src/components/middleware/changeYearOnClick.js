@@ -1,4 +1,5 @@
-function previousYear() {
+function previousYear(e) {
+  e.preventDefault();
   this.setState({
     ...this.state,
     displayedMonth: this.state.displayedMonth.getPreviousYear(),
@@ -9,7 +10,8 @@ function previousYear() {
   });
 };
 
-function nextYear() {
+function nextYear(e) {
+  e.preventDefault();
   this.setState({
     ...this.state,
     displayedMonth: this.state.displayedMonth.getNextYear(),
